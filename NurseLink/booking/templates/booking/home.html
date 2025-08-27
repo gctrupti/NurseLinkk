@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NurseLink</title>
+  <link rel="stylesheet" href="{% static 'booking/style.css' %}">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#hero" class="logo">
+        <img src="images/1_11.svg" alt="NurseLink Logo Icon" class="logo-icon">
+        <span class="logo-text">NurseLink</span>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#hero" class="nav-link-active">Home</a></li>
+          <li><a href="#booking">Booking</a></li>
+          <li><a href="#testimonials">About Us</a></li>
+          <li><a href="#footer">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <img src="images/1_13.svg" alt="NurseLink Heartbeat Logo" class="hero-logo">
+      <h1 class="hero-title">NurseLink</h1>
+      <p class="hero-subtitle">“We want to make home health care as easy as booking a cab”</p>
+      <p class="hero-tagline">Safe, Fast and Reliable</p>
+      <a href="#booking" class="btn btn-primary">Book Now</a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="testimonials-container">
+      <h2 class="testimonials-title">What Our Patients Say</h2>
+      <div class="testimonial-cards-grid">
+
+        <div class="testimonial-card">
+          <!-- <img src="images/women.jpg" alt="Patient Anita" class="testimonial-avatar"> -->
+          <div class="testimonial-content">
+            <p class="testimonial-text">
+              "NurseLink made it so simple to get a trained nurse for my father.
+              The booking felt like ordering a cab, and the nurse was professional and kind."
+              <br><strong>– Anita, Bengaluru</strong>
+            </p>
+            <div class="testimonial-rating">
+              ★★★★☆
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <!-- <img src="C:\Users\Trupt\Desktop\nurseLink\images\women.jpg" alt="Patient" class="testimonial-avatar"> -->
+          <div class="testimonial-content">
+            <p class="testimonial-text">
+              "Thanks to NurseLink, I got quick help for my mother.
+              Booking was seamless, and the nurse was very caring."
+              <br><strong>– Raj, Mumbai</strong>
+            </p>
+            <div class="testimonial-rating">★★★★★</div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <!-- <img src="images/3_17.svg" alt="Patient" class="testimonial-avatar"> -->
+          <div class="testimonial-content">
+            <p class="testimonial-text">
+              "Professional service and easy to use. Highly recommended
+              for anyone who needs trusted home health care."
+              <br><strong>– Priya, Delhi</strong>
+            </p>
+            <div class="testimonial-rating">★★★★★</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column footer-logo-area">
+        <img src="images/3_23.svg" alt="NurseLink Logo Icon" class="footer-logo-icon">
+        <span class="footer-logo-text">NurseLink</span>
+      </div>
+      <div class="footer-column footer-sitemap">
+        <h3 class="footer-heading">Site Map</h3>
+        <ul>
+          <li><a href="#testimonials">About Us</a></li>
+          <li><a href="#footer">Contact Us</a></li>
+          <li><a href="#booking">Bookings</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-column footer-actions">
+        <a href="#booking" class="btn btn-secondary">Book Now</a>
+        <h3 class="footer-heading">Follow Us On</h3>
+        <div class="social-icons">
+          <!-- <a href="#">🌐</a>
+          <a href="#">📘</a>
+          <a href="#">🐦</a> -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

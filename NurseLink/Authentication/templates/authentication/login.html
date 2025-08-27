@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NurseLink | Login</title>
+  <link rel="stylesheet" href="{% static 'authentication/login.css' %}">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <h1 class="title">Login</h1>
+
+      <form method="post">
+        {% csrf_token %}
+        
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" required>
+        </div>
+
+        <button type="submit" class="btn-login">Login</button>
+      </form>
+
+      {% comment %} <p class="signup-text">
+        Don’t have an account? <a href="{% url 'signup' %}">Sign Up</a>
+      </p> {% endcomment %}
+    </div>
+  </div>
+</body>
+</html>

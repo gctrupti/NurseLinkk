@@ -1,0 +1,21 @@
+<!-- authentication/templates/authentication/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>NurseLink | Home</title>
+    <link rel="stylesheet" href="{% static 'authentication/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to NurseLink</h1>
+        <p>Your centralised nurse booking platform</p>
+    </header>
+
+    <main>
+        <a href="{% url 'login' %}">Login</a>
+        {% comment %} <a href="{% url 'signup' %}">Sign Up</a> {% endcomment %}
+    </main>
+</body>
+</html>
