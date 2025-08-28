@@ -1,21 +1,48 @@
-<!-- authentication/templates/authentication/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     {% load static %}
     <meta charset="UTF-8">
-    <title>NurseLink | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NurseLink</title>
     <link rel="stylesheet" href="{% static 'authentication/style.css' %}">
 </head>
 <body>
-    <header>
-        <h1>Welcome to NurseLink</h1>
-        <p>Your centralised nurse booking platform</p>
+    <!-- HEADER -->
+    <header class="header-section">
+      <div class="container header-container">
+        <a href="#" class="logo">
+          <img src="{% static 'images/logoNL.png' %}" alt="NurseLink Logo Icon" class="logo-icon">
+          <span class="logo-text">NurseLink</span>
+        </a>
+        <nav class="nav-buttons">
+          <a href="{% url 'login' %}" class="btn btn-login">Login</a>
+          <a href="{% url 'signup' %}" class="btn btn-signup">Signup</a>
+        </nav>
+      </div>
     </header>
 
-    <main>
-        <a href="{% url 'login' %}">Login</a>
-        <a href="{% url 'signup' %}">Sign Up</a>
-    </main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <!-- merged image -->
+        <div class="hero-image-wrapper">
+          <img src="{% static 'images/circle.png' %}" alt="Decorative background circle" class="hero-bg-circle">
+          <img src="{% static 'images/nurselogo.png' %}" alt="A friendly female doctor holding a clipboard" class="hero-nurse-img">
+        </div>
+        <div class="hero-content">
+          <h1 class="hero-headline">YOUR <span class="highlight">HEALTH</span><br>OUR PRIORITY</h1>
+          <p class="hero-subheadline">“We want to make home health care as easy as booking a cab” Safe, Fast and Reliable</p>
+          <a href="#" class="btn btn-get-started">Get Started</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="footer-section">
+      <div class="container">
+        <p class="footer-text">Copyrights 2025</p>
+      </div>
+    </footer>
 </body>
 </html>
