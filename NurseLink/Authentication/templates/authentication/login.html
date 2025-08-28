@@ -6,32 +6,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NurseLink | Login</title>
   <link rel="stylesheet" href="{% static 'authentication/css/login.css' %}">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Animated Background Elements -->
+  <div class="bg-animation">
+    <div class="floating-circle circle-1"></div>
+    <div class="floating-circle circle-2"></div>
+    <div class="floating-circle circle-3"></div>
+    <div class="floating-circle circle-4"></div>
+  </div>
+
   <div class="login-container">
     <div class="login-box">
-      <h1 class="title">Login</h1>
-
-      <form method="post">
-        {% csrf_token %}
-        
-        <div class="form-group">
-          <label for="username">Username</label>
-          <input type="text" name="username" id="username" required>
+      <!-- Logo Section -->
+      <div class="logo-section">
+        <div class="logo-icon">
+          <i class="fas fa-heartbeat"></i>
         </div>
+        <h2 class="brand-name">NurseLink</h2>
+        <p class="brand-tagline">Your Health, Our Priority</p>
+      </div>
 
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password" required>
+      <!-- Login Form -->
+      <div class="form-container">
+        <h1 class="title">Welcome Back</h1>
+        <p class="subtitle">Please sign in to your account</p>
+
+        <form method="post" class="login-form">
+          {% csrf_token %}
+          
+          <div class="form-group">
+            <div class="input-container">
+              <i class="fas fa-user input-icon"></i>
+              <input type="text" name="username" id="username" placeholder="Enter your username" required>
+              <label for="username" class="floating-label">Username</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-container">
+              <i class="fas fa-lock input-icon"></i>
+              <input type="password" name="password" id="password" placeholder="Enter your password" required>
+              <label for="password" class="floating-label">Password</label>
+              <button type="button" class="password-toggle" id="togglePassword">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-login">
+            <span class="btn-text">Sign In</span>
+            <div class="btn-loader">
+              <div class="spinner"></div>
+            </div>
+          </button>
+        </form>
+
+        <p class="signup-text">
+          Don't have an account? 
+          <a href="{% url 'signup' %}" class="signup-link">Create Account</a>
+        </p>
+      </div>
+
+      <!-- Medical Animation -->
+      <div class="medical-animation">
+        <div class="pulse-circle"></div>
+        <div class="medical-cross">
+          <i class="fas fa-plus"></i>
         </div>
-
-        <button type="submit" class="btn-login">Login</button>
-      </form>
-
-      {% comment %} <p class="signup-text">
-        Don’t have an account? <a href="{% url 'signup' %}">Sign Up</a>
-      </p> {% endcomment %}
+      </div>
     </div>
   </div>
+
+  <script src="{% static 'authentication/js/login.js' %}"></script>
 </body>
 </html>

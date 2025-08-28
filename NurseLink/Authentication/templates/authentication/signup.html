@@ -3,42 +3,139 @@
 <head>
     {% load static %}
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up | NurseLink</title>
     <link rel="stylesheet" href="{% static 'authentication/css/signup.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="signup-container">
-        <h2>Create an Account</h2>
-        
-        <form method="POST" class="signup-form">
-            {% csrf_token %}
-            
-            <div class="form-group">
-                <label for="id_username">Username</label>
-                {{ form.username }}
-            </div>
-
-            <div class="form-group">
-                <label for="id_email">Email</label>
-                {{ form.email }}
-            </div>
-
-            <div class="form-group">
-                <label for="id_password1">Password</label>
-                {{ form.password1 }}
-            </div>
-
-            <div class="form-group">
-                <label for="id_password2">Confirm Password</label>
-                {{ form.password2 }}
-            </div>
-
-            <button type="submit" class="btn">Sign Up</button>
-        </form>
-
-        <p class="redirect-text">
-            Already have an account? <a href="{% url 'login' %}">Login here</a>
-        </p>
+    <!-- Animated Background Elements -->
+    <div class="bg-animation">
+        <div class="floating-circle circle-1"></div>
+        <div class="floating-circle circle-2"></div>
+        <div class="floating-circle circle-3"></div>
+        <div class="floating-circle circle-4"></div>
+        <div class="floating-circle circle-5"></div>
     </div>
+
+    <div class="signup-container">
+        <div class="signup-box">
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h2 class="brand-name">NurseLink</h2>
+                <p class="brand-tagline">Your Health, Our Priority</p>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="form-container">
+                <h1 class="title">Create Your Account</h1>
+                <p class="subtitle">Join our healthcare community today</p>
+
+                <form method="POST" class="signup-form">
+                    {% csrf_token %}
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <div class="input-container">
+                                <i class="fas fa-user input-icon"></i>
+                                {{ form.username }}
+                                <label for="id_username" class="floating-label">Username</label>
+                                <div class="input-helper">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span class="helper-text">Choose a unique username</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-container">
+                                <i class="fas fa-envelope input-icon"></i>
+                                {{ form.email }}
+                                <label for="id_email" class="floating-label">Email Address</label>
+                                <div class="input-helper">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span class="helper-text">We'll keep your email secure</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <div class="input-container">
+                                <i class="fas fa-lock input-icon"></i>
+                                {{ form.password1 }}
+                                <label for="id_password1" class="floating-label">Password</label>
+                                <button type="button" class="password-toggle" data-target="id_password1">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <div class="password-strength">
+                                    <div class="strength-bar">
+                                        <div class="strength-fill"></div>
+                                    </div>
+                                    <span class="strength-text">Password strength</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-container">
+                                <i class="fas fa-lock input-icon"></i>
+                                {{ form.password2 }}
+                                <label for="id_password2" class="floating-label">Confirm Password</label>
+                                <button type="button" class="password-toggle" data-target="id_password2">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <div class="password-match">
+                                    <i class="fas fa-check-circle match-icon"></i>
+                                    <span class="match-text">Passwords match</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-signup">
+                        <span class="btn-text">Create Account</span>
+                        <div class="btn-loader">
+                            <div class="spinner"></div>
+                        </div>
+                        <i class="fas fa-arrow-right btn-arrow"></i>
+                    </button>
+                </form>
+
+                <p class="redirect-text">
+                    Already have an account? 
+                    <a href="{% url 'login' %}" class="login-link">Sign In</a>
+                </p>
+            </div>
+
+            <!-- Medical Animation -->
+            <div class="medical-animation">
+                <div class="pulse-circle"></div>
+                <div class="medical-cross">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="success-animation">
+                <div class="checkmark-circle">
+                    <i class="fas fa-check"></i>
+                </div>
+            </div>
+            <h3>Welcome to NurseLink!</h3>
+            <p>Your account has been created successfully.</p>
+            <button class="modal-btn" onclick="closeModal()">Get Started</button>
+        </div>
+    </div>
+
+    <script src="{% static 'authentication/js/signup.js' %}"></script>
 </body>
 </html>
