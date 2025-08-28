@@ -4,45 +4,134 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NurseLink</title>
+    <title>NurseLink - Your Health, Our Priority</title>
     <link rel="stylesheet" href="{% static 'authentication/css/style.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header-section">
-      <div class="container header-container">
-        <a href="#" class="logo">
-          <img src="{% static 'images/logoNL.png' %}" alt="NurseLink Logo Icon" class="logo-icon">
-          <span class="logo-text">NurseLink</span>
-        </a>
-        <nav class="nav-buttons">
-          <a href="{% url 'login' %}" class="btn btn-login">Login</a>
-          <a href="{% url 'signup' %}" class="btn btn-signup">Signup</a>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <span class="logo-text">NurseLink</span>
+            </div>
+            <div class="nav-buttons">
+                <a href="{% url 'login' %}"><button class="btn-login">Login</button></a>
+                <a href="{% url 'signup' %}"><button class="btn-signup">Signup</button></a>
+            </div>
         </nav>
-      </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section id="hero" class="hero-section">
-      <div class="container hero-container">
-        <!-- merged image -->
-        <div class="hero-image-wrapper">
-          <img src="{% static 'images/circle.png' %}" alt="Decorative background circle" class="hero-bg-circle">
-          <img src="{% static 'images/nurselogo.png' %}" alt="A friendly female doctor holding a clipboard" class="hero-nurse-img">
-        </div>
-        <div class="hero-content">
-          <h1 class="hero-headline">YOUR <span class="highlight">HEALTH</span><br>OUR PRIORITY</h1>
-          <p class="hero-subheadline">“We want to make home health care as easy as booking a cab” Safe, Fast and Reliable</p>
-          <a href="#" class="btn btn-get-started">Get Started</a>
-        </div>
-      </div>
-    </section>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-left">
+                    <h1 class="hero-title">
+                        <span class="title-line">YOUR <span class="highlight">HEALTH</span></span>
+                        <span class="title-line">OUR</span>
+                        <span class="title-line">PRIORITY</span>
+                    </h1>
+                    <p class="hero-description">
+                        "We want to make home health care as easy as booking a cab" Safe, Fast and Reliable
+                    </p>
+                    <button class="cta-button">Get Started</button>
+                </div>
+                <div class="hero-right">
+                    <div class="medical-circle">
+                        <div class="floating-dot dot-1"></div>
+                        <div class="floating-dot dot-2"></div>
+                        <div class="floating-dot dot-3"></div>
+                        <div class="floating-dot dot-4"></div>
+                        <div class="medical-cross">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="medical-icons">
+                            <div class="icon-circle icon-1">
+                                <i class="fas fa-stethoscope"></i>
+                            </div>
+                            <div class="icon-circle icon-2">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div class="icon-circle icon-3">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- FOOTER -->
-    <footer id="footer" class="footer-section">
-      <div class="container">
-        <p class="footer-text">Copyrights 2025</p>
-      </div>
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose NurseLink?</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>24/7 Availability</h3>
+                        <p>Round-the-clock healthcare support whenever you need it</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Licensed Professionals</h3>
+                        <p>All our nurses are certified and experienced healthcare providers</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Easy Booking</h3>
+                        <p>Book healthcare services as easily as ordering a ride</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-user-nurse"></i>
+                        </div>
+                        <span class="logo-text">NurseLink</span>
+                    </div>
+                    <p>Making healthcare accessible, one home at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#services">Services</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#privacy">Privacy Policy</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NurseLink. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="{% static 'authentication/js/script.js' %}"></script>
 </body>
 </html>
