@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Best Matching Nurse</title>
+</head>
+<body>
+    <h1>Your Best Match</h1>
+
+    {% if nurse %}
+        <div class="nurse-profile">
+            <h2>{{ nurse.Name }}</h2>
+            <p><strong>Specialization:</strong> {{ nurse.Specialization }}</p>
+            <p><strong>Location:</strong> {{ nurse.Location }}</p>
+            <p><strong>Experience:</strong> {{ nurse.Experience_Years }} years</p>
+            <p><strong>Availability:</strong> {{ nurse.Available }}</p>
+            <p><strong>Contact:</strong> {{ nurse.Contact }}</p>
+        </div>
+        <p>{{ message }}</p>
+    {% else %}
+        <p>{{ message }}</p>
+        <p>We could not find a suitable nurse based on your profile. Please try again later.</p>
+    {% endif %}
+
+    <a href="{% url 'home' %}">Return to Home</a>
+</body>
+</html>
