@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NurseLink - Profile</title>
+  <link rel="stylesheet" href="{% static 'profile/css/profile.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+  <!-- HEADER (same as booking) -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#hero" class="logo">
+        <div class="logo-icon"><i class="fas fa-heartbeat"></i></div>
+        <span class="logo-text">NurseLink</span>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/booking" class="nav-link-active">Booking</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#contact" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-toggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- PROFILE SECTION -->
+  <main class="profile-section">
+    <div class="profile-content">
+      <div class="profile-image-container">
+        <div class="profile-image"></div>
+        <div class="online-indicator"></div>
+      </div>
+      <div>
+        <h1 class="profile-name">Dr. Sarah Johnson</h1>
+        <p class="profile-specialization">Post-Pregnancy Specialist</p>
+        <div class="rating-stars">
+          <span class="star filled">★</span>
+          <span class="star filled">★</span>
+          <span class="star filled">★</span>
+          <span class="star filled">★</span>
+          <span class="star">★</span>
+        </div>
+        <p class="profile-description">
+          With 10+ years of experience, Dr. Sarah provides compassionate care
+          for new mothers, ensuring recovery and well-being for both mother
+          and child.
+        </p>
+        <a href="/booking" class="btn-book-now-dark">Book Now</a>
+        <div class="profile-stats">
+          <div class="stat-card">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Happy Patients</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">10 yrs</span>
+            <span class="stat-label">Experience</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">4.8</span>
+            <span class="stat-label">Average Rating</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="testimonials-container">
+      <h2 class="profile-reviews">What Patients Say</h2>
+      <div class="testimonial-slider">
+        <div class="testimonial-slide active">
+          <p class="testimonial-text">
+            "Dr. Sarah helped me recover quickly after childbirth. Her guidance
+            made the process so much easier."
+          </p>
+          <span class="author-name">— Aditi Sharma</span>
+        </div>
+        <div class="testimonial-slide">
+          <p class="testimonial-text">
+            "Very professional and caring. She was always available to answer
+            my questions."
+          </p>
+          <span class="author-name">— Priya Nair</span>
+        </div>
+        <div class="testimonial-slide">
+          <p class="testimonial-text">
+            "Her support was invaluable for me and my baby. Highly recommend!"
+          </p>
+          <span class="author-name">— Radhika Mehta</span>
+        </div>
+      </div>
+      <div class="testimonial-controls">
+        <button class="testimonial-btn prev">‹</button>
+        <div class="testimonial-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <button class="testimonial-btn next">›</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- CHATBOT ICON BUTTON -->
+    <a href="https://your-chatbot-link.com" target="_blank" class="chatbot-float">
+      <i class="fas fa-comment-dots"></i>
+    </a>
+
+  <!-- FOOTER (same as booking) -->
+  <footer id="footer" class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column footer-logo-area">
+        <div class="footer-logo-icon"><i class="fas fa-heartbeat"></i></div>
+        <span class="footer-logo-text">NurseLink</span>
+        <p class="footer-description">Your trusted partner in home healthcare services</p>
+      </div>
+      <div class="footer-column footer-sitemap">
+        <h3 class="footer-heading">Site Map</h3>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="/booking">Bookings</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-column footer-contact">
+        <h3 class="footer-heading">Contact Info</h3>
+        <div class="contact-info">
+          <div class="contact-item"><i class="fas fa-phone"></i><span>+91 98765 43210</span></div>
+          <div class="contact-item"><i class="fas fa-envelope"></i><span>care@nurselink.com</span></div>
+          <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Available across India</span></div>
+        </div>
+      </div>
+      <div class="footer-column footer-actions">
+        <a href="/booking" class="btn btn-secondary">Book Now</a>
+        <h3 class="footer-heading">Follow Us On</h3>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 NurseLink. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="profile.js"></script>
+</body>
+</html>
