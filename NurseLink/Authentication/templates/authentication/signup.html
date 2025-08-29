@@ -34,7 +34,7 @@
                 <h1 class="title">Create Your Account</h1>
                 <p class="subtitle">Join our healthcare community today</p>
 
-                <form method="POST" class="signup-form">
+                <form method="POST" action="{% url 'signup' %}" class="signup-form">
                     {% csrf_token %}
                     
                     <div class="form-row">
