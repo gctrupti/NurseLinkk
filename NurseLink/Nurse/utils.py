@@ -1,19 +1,8 @@
-import subprocess
-import json
+# Nurse/urls.py
 
-def query_granite(prompt):
-    """Send a prompt to Granite LLM via Ollama CLI and get the response."""
-    cmd = [
-        "ollama",
-        "run",
-        "granite3.2-vision:2b",
-        "--prompt",
-        prompt,
-        "--json"  # returns JSON output
-    ]
-    result = subprocess.run(cmd, capture_output=True, text=True)
-    if result.returncode != 0:
-        raise Exception(f"Granite LLM error: {result.stderr}")
-    
-    response = json.loads(result.stdout)
-    return response.get("output", "")
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('nurses/', views.list_nurses, name='list_nurses'),
+]

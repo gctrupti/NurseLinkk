@@ -3,11 +3,11 @@ from django.contrib.auth.models import User
 
 class PatientProfile(models.Model):
     SERVICE_CHOICES = [
-        ('general', 'General Checkup'),
-        ('nursing', 'Nursing Care'),
-        ('physio', 'Physiotherapy'),
-        ('lab', 'Lab Tests'),
-        ('homecare', 'Home Care'),
+        ('general', 'General Visit'),
+        ('Surgery', 'Post Surgery'),
+        ('Elderly', 'Elderly Care'),
+        ('Pedo', 'Pediatric Care'),
+        ('pregnancy', 'Post Pregnancy Care'),
     ]
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)

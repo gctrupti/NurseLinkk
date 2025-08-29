@@ -5,7 +5,7 @@ class PatientBookingForm(forms.ModelForm):
     class Meta:
         model = PatientProfile
         fields = [
-            'phone', 'address', 'city', 'state', 'pin_code',
+            'city', 'state', 'pin_code',
             'date', 'time', 'symptoms', 'service_type'
         ]
         widgets = {

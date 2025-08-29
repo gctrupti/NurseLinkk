@@ -7,7 +7,7 @@ class Nurse_info(models.Model):
     email=models.EmailField()
     phone=models.CharField(max_length=15)
     address=models.TextField()
-    city=models.CharField(max_length=50)
+    state=models.CharField(max_length=50)
     state=models.CharField(max_length=50)
     Pin_code=models.CharField(max_length=10)
     experience=models.IntegerField()

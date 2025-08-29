@@ -16,7 +16,7 @@ def patient_booking(request):
             booking = form.save(commit=False)
             booking.user = request.user  # link booking to the logged-in user
             booking.save()
-            return redirect('best_nurse', patient_id=booking.id)  # Redirect to best nurse view with patient ID
+            return redirect('list_nurses')  # Redirect to best nurse view with patient ID
     else:
         form = PatientBookingForm()
     
