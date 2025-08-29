@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{% static 'booking/css/style.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="{% static 'booking/css/booking.css' %}">
 </head>
 
 <body>
@@ -79,10 +79,6 @@
                 </div>
             </div>
 
-            <!-- Cards Info -->
-            <div class="cards-info">
-                Showing <span class="cards-count" id="cardCount">9</span> healthcare professionals
-            </div>
 
             <!-- Cards Section -->
             <div class="cards-section">
@@ -173,7 +169,7 @@
         </div>
     </footer>
 
-    <script src="booking.js"></script>
+    <script src="{% static 'booking/js/booking.js' %}"></script>
 </body>
 
 </html>

@@ -4,3 +4,6 @@ from django.contrib.auth.decorators import login_required
 
 def home(request):
     return render(request, 'booking/home.html')
+
+def booking(request):
+    return render(request, 'booking/booking.html')
