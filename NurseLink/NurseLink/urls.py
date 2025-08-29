@@ -23,4 +23,5 @@ urlpatterns = [
     path('home/', include('booking.urls')),
     path('nurse/', include('Nurse.urls')),
     path('error/', include('Nurse.urls')),
+    path('myapp/', include('myapp.urls')),  # New line added here
 ]

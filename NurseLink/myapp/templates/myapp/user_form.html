@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Registration Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #a2e8f4, #e6f9fc);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 420px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0099a8;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #00b7c5;
+      box-shadow: 0 0 5px rgba(0, 183, 197, 0.4);
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #00b7c5, #0099a8);
+      border: none;
+      border-radius: 25px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #0099a8, #00b7c5);
+      box-shadow: 0 4px 12px rgba(0, 153, 168, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Personal Detail To Book a Nurse</h2>
+    <form method="post">
+      {% csrf_token %}
+      
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+
+      <label for="gender">Gender:</label>
+      <input type="text" id="gender" name="gender" required>
+
+      <label for="specialization">Specialization:</label>
+      <select id="specialization" name="specialization" required>
+        <option value="">-- Select Specialization --</option>
+        <option value="General Care">General Care</option>
+        <option value="Post Surgery Care">Post Surgery Care</option>
+        <option value="Post Pregnancy Care">Post Pregnancy Care</option>
+        <option value="Elderly Care">Elderly Care</option>
+        <option value="Pediatric Care">Pediatric Care</option>
+      </select>
+
+      <label for="location">Location:</label>
+      <select id="location" name="location" required>
+        <option value="">-- Select Location --</option>
+        <option value="Bangalore">Bangalore</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Delhi">Delhi</option>
+      </select>
+
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Preferred Time:</label>
+      <input type="time" id="time" name="time" required>
+
+      <label for="need">Your Need:</label>
+      <textarea id="need" name="need" rows="4" required></textarea>
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="3" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
