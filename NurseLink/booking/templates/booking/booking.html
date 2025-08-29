@@ -25,9 +25,9 @@
             </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#hero" class="nav-link">Home</a></li>
+                    <li><a href="{% url 'home' %}" class="nav-link">Home</a></li>
                     <li><a href="#booking" class="nav-link-active">Booking</a></li>
-                    <li><a href="#testimonials" class="nav-link">About Us</a></li>
+                    {% comment %} <li><a href="#{% url 'home' %}" class="nav-link">About Us</a></li> {% endcomment %}
                     <li><a href="#footer" class="nav-link">Contact Us</a></li>
                 </ul>
             </nav>
@@ -113,7 +113,7 @@
     </main>
 
     <!-- CHATBOT ICON BUTTON -->
-    <a href="https://your-chatbot-link.com" target="_blank" class="chatbot-float">
+    <a href="https://nurselink-bot.streamlit.app/" target="_blank" class="chatbot-float">
         <i class="fas fa-comment-dots"></i>
     </a>
 
