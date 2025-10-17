@@ -83,7 +83,7 @@ def match_nurse(request):
 
     # 4. Call Gemini LLM
     try:
-        model = genai.GenerativeModel("models/gemini-1.5-flash-latest")
+        model = genai.GenerativeModel("models/gemini-2.0-flash")
         response = model.generate_content(prompt, generation_config={"temperature": 0.2})
 
         raw_output = response.text.strip()
